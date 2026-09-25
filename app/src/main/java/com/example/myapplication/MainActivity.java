@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -26,14 +28,28 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(v -> {
-            Toast.makeText(MainActivity.this, "My first android studio application", Toast.LENGTH_SHORT).show();
+        final Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(MainActivity.this, "My first android studio application", Toast.LENGTH_SHORT);
+                toast.show();
+            }
         });
 
-        FloatingActionButton fab = findViewById(R.id.floatingActionButton2);
-        fab.setOnClickListener(v -> {
-            Snackbar.make(v, "Just another option for button", Snackbar.LENGTH_SHORT).show();
+        final FloatingActionButton fab = findViewById(R.id.floatingActionButton2);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar snackbar = Snackbar.make(v, "Just another option for button", Snackbar.LENGTH_SHORT);
+                snackbar.setBackgroundTint(Color.rgb(240,240,245));
+                snackbar.setTextColor(Color.BLACK);
+                snackbar.show();
+            }
         });
+
+
+
+
+
     }
 }

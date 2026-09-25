@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="naslov">Mobile Application!</string>
+    <string name="podnaslov">Hello World!</string>
+    <string name="checkboxtxt">Strinjam se s pogoji uporabe</string>
+    <string name="buttontxt">Prijava</string>
 </resources>
